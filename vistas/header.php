@@ -221,8 +221,6 @@ if ($_SESSION['acceso']==1) {
         </li>';
 }
         ?>
-        <li><a href="#"><i class="fa fa-question-circle"></i> <span>Ayuda</span><small class="label pull-right bg-yellow">PDF</small></a></li>
-        <li><a href="https://www.compartiendocodigos.com/" target="_blanck"><i class="fa  fa-exclamation-circle"></i> <span>Acerca de</span><small class="label pull-right bg-yellow">ComCod</small></a></li>
 
       </ul>
     </section>
