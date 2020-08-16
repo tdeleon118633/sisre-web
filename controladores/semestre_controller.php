@@ -42,9 +42,9 @@ switch ($_GET["op"]) {
 
 			$data[]=array(
 
-			"0"=>'<button class="btn btn-warning btn-xs" onclick="mostrar('.$reg->idgrupo.')"><i class="fa fa-pencil"></i></button>'.' '.'<button class="btn btn-danger btn-xs" onclick="desactivar('.$reg->idgrupo.')"><i class="fa fa-close"></i></button>',
-            "1"=>$reg->nombre,
-            "2"=>$reg->usuario
+			"2"=>'<button class="btn btn-primary btn-xs" onclick="mostrar('.$reg->idgrupo.')"><i class="fa fa-pencil-square-o"></i></button>'.' '.'<button class="btn btn-danger btn-xs" onclick="desactivar('.$reg->idgrupo.')"><i class="fa fa-eraser"></i></button>',
+            "0"=>$reg->nombre,
+            "1"=>$reg->usuario
               );
 		}
 		$results=array(
