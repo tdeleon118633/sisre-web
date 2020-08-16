@@ -1,6 +1,6 @@
-<?php 
-require_once "../modelos/Grupos.php";
-if (strlen(session_id())<1) 
+<?php
+require_once "../modelos/semestre_model.php";
+if (strlen(session_id())<1)
 	session_start();
 
 $grupos = new Grupos();
@@ -21,13 +21,13 @@ switch ($_GET["op"]) {
 		echo $rspta ? "Datos actualizados correctamente" : "No se pudo actualizar los datos";
 	}
 		break;
-	
+
 
 	case 'anular':
 		$rspta=$grupos->anular($idgrupo);
 		echo $rspta ? "Ingreso anulado correctamente" : "No se pudo anular el ingreso";
 		break;
-	
+
 	case 'mostrar':
 		$rspta=$grupos->mostrar($idgrupo);
 		echo json_encode($rspta);
@@ -38,7 +38,7 @@ switch ($_GET["op"]) {
 		$data=Array();
 
 		while ($reg=$rspta->fetch_object()) {
-                
+
 
 			$data[]=array(
 
@@ -47,13 +47,13 @@ switch ($_GET["op"]) {
             "2"=>$reg->usuario
               );
 		}
-		$results=array( 
+		$results=array(
              "sEcho"=>1,//info para datatables
              "iTotalRecords"=>count($data),//enviamos el total de registros al datatable
              "iTotalDisplayRecords"=>count($data),//enviamos el total de registros a visualizar
-             "aaData"=>$data); 
+             "aaData"=>$data);
 		echo json_encode($results);
-		break; 
+		break;
 
 }
- ?> 
+ ?>
