@@ -138,7 +138,7 @@ if ($_SESSION['escritorio']==1) {
                       </span>
                     </a>
                     <ul class="treeview-menu">
-                      <li><a href="grupos.php"><i class="fa fa-book"></i> Semestre</a></li>
+                      <li><a href="semestre_view.php"><i class="fa fa-book"></i> Ciclos</a></li>
                     </ul>
                   </li>';
           }
@@ -206,20 +206,20 @@ if ($_SESSION['escritorio']==1) {
 
 
            <?php
-if ($_SESSION['acceso']==1) {
-  echo '  <li class="treeview">
-          <a href="#">
-            <i class="fa fa-users"></i> <span>Acceso</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="usuario.php"><i class="fa fa-circle-o"></i> Profesores</a></li>
-            <li><a href="permiso.php"><i class="fa fa-circle-o"></i> Permisos</a></li>
-          </ul>
-        </li>';
-}
+           if ($_SESSION['acceso']==1) {
+             echo '  <li class="treeview">
+                  <a href="#">
+                    <i class="fa fa-users"></i> <span>Acceso</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li><a href="usuario.php"><i class="fa fa-black-tie"></i> Catedraticos</a></li>
+                    <li><a href="permiso.php"><i class="fa fa-expeditedssl"></i> Permisos</a></li>
+                  </ul>
+                </li>';
+          }
         ?>
 
       </ul>
