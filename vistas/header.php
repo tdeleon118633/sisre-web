@@ -128,20 +128,20 @@ if ($_SESSION['escritorio']==1) {
         ?>
 
 
-               <?php
-if ($_SESSION['grupos']==1) {
-  echo '<li class="treeview">
-          <a href="#">
-            <i class="fa fa-shopping-cart"></i> <span>Grupos</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="grupos.php"><i class="fa fa-circle-o"></i> Grupos</a></li>
-          </ul>
-        </li>';
-}
+        <?php
+          if ($_SESSION['grupos'] == 1 ) {
+            echo '<li class="treeview">
+                    <a href="#">
+                      <i class="fa fa-mortar-board"></i> <span>Asignaturas</span>
+                      <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                      </span>
+                    </a>
+                    <ul class="treeview-menu">
+                      <li><a href="grupos.php"><i class="fa fa-book"></i> Semestre</a></li>
+                    </ul>
+                  </li>';
+          }
         ?>
 
 
