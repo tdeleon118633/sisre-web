@@ -23,7 +23,7 @@ if ($_SESSION['grupos']==1) {
 <div class="box-header with-border">
   <h1 class="box-title"> Seleccione un curso </h1>
   <div class="box-tools pull-right">
-        <a href="../vistas/vista_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><button class="btn btn-success"><i class='fa fa-arrow-circle-left'></i> Volver</button></a>
+        <a href="../vistas/vista_grupo_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><button class="btn btn-success"><i class='fa fa-arrow-circle-left'></i> Volver</button></a>
         <input type="hidden" id="idgrupo" name="idgrupo" value="<?php echo $_GET["idgrupo"];?>">
   </div>
 </div>
