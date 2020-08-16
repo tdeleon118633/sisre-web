@@ -98,7 +98,7 @@ if (strlen(session_id())<1)
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="../controladores/usuario.php?op=salir" class="btn btn-default btn-flat">Salir</a>
+                  <a href="../controladores/usuario_controller.php?op=salir" class="btn btn-default btn-flat">Salir</a>
                 </div>
               </li>
             </ul>
@@ -215,7 +215,7 @@ if ($_SESSION['escritorio']==1) {
                     </span>
                   </a>
                   <ul class="treeview-menu">
-                    <li><a href="usuario.php"><i class="fa fa-black-tie"></i> Catedraticos</a></li>
+                    <li><a href="usuario_view.php"><i class="fa fa-black-tie"></i> Catedraticos</a></li>
                     <li><a href="permiso.php"><i class="fa fa-expeditedssl"></i> Permisos</a></li>
                   </ul>
                 </li>';

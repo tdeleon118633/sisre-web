@@ -4,7 +4,7 @@ $("#frmAcceso").on('submit',function(e)
     logina=$("#logina").val();
     clavea=$("#clavea").val();
 
-    $.post("controladores/usuario.php?op=verificar",
+    $.post("controladores/usuario_controller.php?op=verificar",
         {"logina":logina,"clavea":clavea},
         function(data)
     {
