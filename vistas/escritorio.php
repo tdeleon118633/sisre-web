@@ -43,7 +43,7 @@ $colores = array("box box-danger direct-chat direct-chat-danger bg-blue");
               <h3 class="box-title"><b><?php echo $nombre_grupo; ?></b></h3>
               <!-- /.box-header boton entrar-->
               <div class="box-header" style="">
-                  <a href="vista_grupo.php?idgrupo=<?php echo $idgrupo; ?>" class="btn-default pull-right" >Acceder <i class="fa fa-arrow-circle-right"></i></a>
+                  <a href="vista_grupo_view.php?idgrupo=<?php echo $idgrupo; ?>" class="btn-default pull-right" >Acceder <i class="fa fa-arrow-circle-right"></i></a>
               </div>
 
               <div class="box-tools pull-right">
