@@ -89,14 +89,14 @@ if (strlen(session_id())<1)
                 <img src="../files/usuarios/<?php echo $_SESSION['imagen']; ?>" class="img-circle" alt="User Image">
 
                 <p>
-                  <?php echo $_SESSION['nombre'].' '.$_SESSION['cargo']; ?>
+                  <?php echo $_SESSION['nombre'].' / '.$_SESSION['cargo']; ?>
                 </p>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
+                <!--<div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
-                </div>
+                </div>-->
                 <div class="pull-right">
                   <a href="../controladores/usuario_controller.php?op=salir" class="btn btn-default btn-flat">Salir</a>
                 </div>
@@ -155,10 +155,10 @@ if ($_SESSION['escritorio']==1) {
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href="vista_asistencia_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-circle-o"></i> Agregar</a></li>
+          <li><a href="vista_asistencia_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-plus"></i> Agregar</a></li>
           </ul>
         </li>
-          <li class="treeview">
+          <!--<li class="treeview">
           <a href="#">
             <i class="fa fa-smile-o"></i> <span>Conducta</span>
             <span class="pull-right-container">
@@ -168,38 +168,38 @@ if ($_SESSION['escritorio']==1) {
           <ul class="treeview-menu">
           <li><a href="conducta.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-circle-o"></i> Agregar</a></li>
           </ul>
-        </li>
+        </li>-->
           <li class="treeview">
           <a href="#">
-            <i class="fa fa-tasks"></i> <span>Calificaciones</span>
+            <i class="fa  fa-list-alt"></i> <span>Curso estudiante</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href="calificaciones_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-circle-o"></i> Calificaciones</a></li>
+          <li><a href="calificaciones_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-external-link"></i>Asignar</a></li>
           </ul>
         </li>
           <li class="treeview">
           <a href="#">
-            <i class="fa fa-th-large"></i> <span>Cursos</span>
+            <i class="fa fa-user-plus"></i> <span>Registro Cursos</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a id="btncursos" href="cursos_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-circle-o"></i> Agregar</a></li>
+          <li><a id="btncursos" href="cursos_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-plus"></i> Cursos</a></li>
           </ul>
         </li>
           <li class="treeview">
           <a href="#">
-            <i class="fa fa-th-list"></i> <span>Listas</span>
+            <i class="fa fa-bar-chart"></i> <span>Reportes</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a id="btnlistas" href="listasis.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-circle-o"></i> Agregar</a></li>
+          <li><a id="btnlistas" href="listasis.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-print"></i> Imprimir</a></li>
           </ul>
         </li>
           <?php endif; ?>
