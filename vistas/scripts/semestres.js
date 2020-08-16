@@ -60,7 +60,7 @@ function listar(){
 		"bDestroy":true,
 		"iDisplayLength":10,//paginacion
     columnDefs: [
-    { className: 'text-center', targets: [0,1] },
+    { className: 'text-center', targets: [0,1,2] },
     ],
 		"order":[[0,"desc"]]//ordenar (columna, orden)
 	}).DataTable();

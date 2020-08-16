@@ -39,11 +39,6 @@ if ($_SESSION['grupos']==1) {
     </thead>
     <tbody>
     </tbody>
-    <tfoot>
-              <th>Nombre</th>
-              <th>Usuario</th>
-              <th>Opciones</th>
-    </tfoot>
   </table>
 </div>
 <div class="panel-body" style="height: 400px;" id="formularioregistros">
