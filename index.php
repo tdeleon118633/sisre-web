@@ -100,7 +100,7 @@
      <script src="public/js/bootstrap.min.js"></script>
       <!-- Bootbox -->
      <script src="public/js/bootbox.min.js"></script>
-     <script type="text/javascript" src="vistas/scripts/login.js"></script>
+     <script type="text/javascript" src="core/login.js"></script>
 
 
    </body>
