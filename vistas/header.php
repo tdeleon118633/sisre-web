@@ -188,7 +188,7 @@ if ($_SESSION['escritorio']==1) {
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a id="btncursos" href="cursos.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-circle-o"></i> Agregar</a></li>
+          <li><a id="btncursos" href="cursos_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-circle-o"></i> Agregar</a></li>
           </ul>
         </li>
           <li class="treeview">
