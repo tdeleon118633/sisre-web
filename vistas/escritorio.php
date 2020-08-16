@@ -3,11 +3,10 @@
 ob_start();
 session_start();
 if (!isset($_SESSION['nombre'])) {
-  //TDELEON REGRESA AL LOGIN 
-  header("Location: ../index.php");
+  header("Location: login.html");
 }else{
 
-
+ 
 require 'header.php';
 
 if ($_SESSION['escritorio']==1) {
@@ -30,30 +29,33 @@ $user_id=$_SESSION["idusuario"];
       <div class="box">
 <div class="panel-body">
 <?php $rspta=$consulta->cantidadgrupos($user_id);
-$colores = array("box box-success direct-chat direct-chat-success bg-green", "box box-primary direct-chat direct-chat-primary bg-aqua", "box box-warning direct-chat direct-chat-warning bg-yellow", "box box-danger direct-chat direct-chat-danger bg-red");
+$colores = array("box box-danger direct-chat direct-chat-danger bg-blue");
       while ($reg=$rspta->fetch_object()) {
         $idgrupo=$reg->idgrupo;
         $nombre_grupo=$reg->nombre;
         ?>
 
 
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-8">
           <!-- DIRECT CHAT SUCCESS -->
-          <div class="<?php echo $colores[array_rand($colores)]; ?> collapsed-box">
+          <div class="<?php echo $colores[array_rand($colores)]; ?> box">
             <div class="box-header with-border">
-              <h3 class="box-title"><?php echo $nombre_grupo; ?></h3>
+              <h3 class="box-title"><b><?php echo $nombre_grupo; ?></b></h3>
+              <!-- /.box-header boton entrar-->
+              <div class="box-header" style="">
+                  <a href="vista_grupo.php?idgrupo=<?php echo $idgrupo; ?>" class="btn-default pull-right" >Acceder <i class="fa fa-arrow-circle-right"></i></a>
+              </div>
 
               <div class="box-tools pull-right">
-                <span data-toggle="tooltip" title="" class="badge" data-original-title="Cantidad de Estudiantes">
-                  <?php
+                <span data-toggle="tooltip" title="" class="badge" data-original-title="Estudiantes del Ciclo">
+                  <?php 
                     $rsptag=$consulta->cantidadg($user_id,$idgrupo);
                     while ($regrupo=$rsptag->fetch_object()) {
                       echo $regrupo->total_alumnos;
                     }
                    ?>
                 </span>
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                </button>
+                
               </div>
             </div>
             <!-- /.box-header -->
@@ -65,27 +67,24 @@ $colores = array("box box-success direct-chat direct-chat-success bg-green", "bo
 
                     <?php
                     $rsptas=$consulta->cantidadalumnos_porgrupo($user_id,$idgrupo);
-                    while ($reg=$rsptas->fetch_object()) {
+                    while ($reg=$rsptas->fetch_object()){
 
+                      
                    if (empty($reg->image)){
                     echo ' <img class="img-circle" src="../files/articulos/anonymous.png" height="50px" width="50px">';
+                    
 
-                  }else echo '<img class="img-circle" src="../files/articulos/'. $reg->image.'" height="50px" width="50px">';
+                  }else echo '<img class="img-circle" src="../files/articulos/anonimous2.png'. $reg->image.'" height="50px" width="50px">';
+                     
                      } ?>
-                  <!-- /.direct-chat-info -->
-                  <!-- /.direct-chat-text -->
+   
                 </div>
               </div>
-              <!--/.direct-chat-messages-->
-              <!-- /.direct-chat-pane -->
+
             </div>
-            <!-- /.box-body -->
-            <div class="box-footer" style="">
-              <a href="vista_grupo.php?idgrupo=<?php echo $idgrupo; ?>" class="btn btn-default form-control" >Ir... <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-            <!-- /.box-footer-->
+  
           </div>
-          <!--/.direct-chat -->
+         
         </div>
 
 
@@ -103,16 +102,17 @@ $colores = array("box box-success direct-chat direct-chat-success bg-green", "bo
     </section>
     <!-- /.content -->
   </div>
-<?php
+<?php 
 }else{
- require 'noacceso.php';
+ require 'noacceso.php'; 
 }
 
 require 'footer.php';
  ?>
 
- <?php
+ <?php 
 }
 
 ob_end_flush();
   ?>
+
