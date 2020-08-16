@@ -155,7 +155,7 @@ if ($_SESSION['escritorio']==1) {
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href="asistencia.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-circle-o"></i> Agregar</a></li>
+          <li><a href="vista_asistencia_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-circle-o"></i> Agregar</a></li>
           </ul>
         </li>
           <li class="treeview">

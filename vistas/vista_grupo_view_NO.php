@@ -31,20 +31,19 @@ if ($_SESSION['grupos']==1) {
         <div class="col-md-12">
       <div class="box">
     <div class="box-header with-border">
-      
           <h1 class="box-title">Grupo: <?php echo $nombre_grupo; ?> <button class="btn btn-success", onclick="mostrarform(true)" id="btnagregar"><i class="fa fa-plus-circle"></i>Agregar Alumno</button> 
           </h1> 
-        <a id="btnasistencia" href="vista_asistencia_view.php?idgrupo=<?php echo $idgrupo; ?>" class="btn btn-warning"><i class='fa fa-check'></i> Asistencia</a>
-        <!--<a  id="btnconducta" href="conducta.php?idgrupo=<?php echo $idgrupo; ?>" class="btn btn-primary"><i class='fa fa-smile-o'></i> Comportamiento</a>-->
-        <a id="btncalificaciones" href="calificaciones_view.php?idgrupo=<?php echo $idgrupo; ?>" class="btn btn-danger"><i class='fa fa-tasks'></i> Calificaciones</a>
-        <a id="btncursos" href="cursos_view.php?idgrupo=<?php echo $idgrupo; ?>" class="btn btn-primary"><i class='fa fa-th-large'></i> Cursos</a>
+        <a id="btnasistencia" href="asistencia.php?idgrupo=<?php echo $idgrupo; ?>" class="btn btn-warning"><i class='fa fa-check'></i> Asistencia</a>
+        <a  id="btnconducta" href="conducta.php?idgrupo=<?php echo $idgrupo; ?>" class="btn btn-primary"><i class='fa fa-smile-o'></i> Comportamiento</a>
+        <a id="btncalificaciones" href="calificaciones.php?idgrupo=<?php echo $idgrupo; ?>" class="btn btn-danger"><i class='fa fa-tasks'></i> Calificaciones</a>
+        <a id="btncursos" href="cursos.php?idgrupo=<?php echo $idgrupo; ?>" class="btn btn-primary"><i class='fa fa-th-large'></i> Cursos</a>
         <a  id="btnlistas" href="listasis.php?idgrupo=<?php echo $idgrupo; ?>" class="btn btn-info"><i class='fa fa-th-list'></i> Listas</a>
 
 
 
 
     <div class="box-tools pull-right">
-      <a id="btngrupos" href="escritorio.php"><button class="btn btn-info"><i class='fa fa-arrow-circle-left'></i> Ciclo</button></a>
+      <a id="btngrupos" href="escritorio.php"><button class="btn btn-info"><i class='fa fa-th-large'></i> Semestres</button></a>
     </div>
 </div>
 <!--box-header-->
@@ -52,13 +51,13 @@ if ($_SESSION['grupos']==1) {
 <div class="panel-body table-responsive" id="listadoregistros" style="text-align: center;">
   <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
     <thead >
-       <th style="text-align: center;">Opciones</th>
-      <th style="text-align: center;">Imagen</th>
       <th style="text-align: center;">Nombre</th>
-      <th style="text-align: center;">Apellido</th>
-      <th style="text-align: center;">Telefono</th>
+      <th style="text-align: center;">Apellidos</th>
       <th style="text-align: center;">Dirección</th>
+      <th style="text-align: center;">Teléfono</th>
       <th style="text-align: center;">Email</th>
+      <th style="text-align: center;">Imagen</th>
+      <th style="text-align: center;">Opciones</th>
     </thead>
      
   </table>

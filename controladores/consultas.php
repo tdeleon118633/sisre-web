@@ -29,7 +29,7 @@ switch ($_GET["op"]) {
 			exit(0);
 		}
 
-		require_once "../modelos/Alumnos.php";
+		require_once "../modelos/Alumnos_model.php";
 		$alumnos=new Alumnos();
 		$team_id=$_REQUEST["idgrupo"];
 		$rsptav=$alumnos->verficar_alumno($user_id,$team_id);
@@ -116,7 +116,7 @@ switch ($_GET["op"]) {
 			exit(0);
 		}
 
-		require_once "../modelos/Alumnos.php";
+		require_once "../modelos/Alumnos_model.php";
 		$alumnos=new Alumnos();
 		$team_id=$_REQUEST["idgrupo"];
 		$rsptav=$alumnos->verficar_alumno($user_id,$team_id);
@@ -189,7 +189,7 @@ switch ($_GET["op"]) {
 
 	case 'listar_calificacion':
 
-		require_once "../modelos/Alumnos.php";
+		require_once "../modelos/Alumnos_model.php";
 		$alumnos=new Alumnos();
 		$team_id=$_REQUEST["idgrupo"];
 		$rsptav=$alumnos->verficar_alumno($user_id,$team_id);

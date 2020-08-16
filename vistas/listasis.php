@@ -30,7 +30,7 @@ if ($_SESSION['grupos']==1) {
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs pull-right">
               <li>
-                 <a href="../vistas/vista_grupo.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class='fa fa-arrow-circle-left'></i> Volver</a>
+                 <a href="../vistas/vista_grupo_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class='fa fa-arrow-circle-left'></i> Volver</a>
               </li>
               <li><a href="#tab_1-1" data-toggle="tab" aria-expanded="false">Calificaciones</a></li>
               <li><a href="#tab_2-2" data-toggle="tab" aria-expanded="false">Comportamiento</a></li>

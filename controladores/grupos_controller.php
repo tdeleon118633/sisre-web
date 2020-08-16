@@ -1,5 +1,5 @@
 <?php 
-require_once "../modelos/grupos_view.php";
+require_once "../modelos/grupos_model.php";
 if (strlen(session_id())<1) 
 	session_start();
 
