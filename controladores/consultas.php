@@ -29,7 +29,7 @@ switch ($_GET["op"]) {
 			exit(0);
 		}
 
-		require_once "../modelos/Alumnos_model.php";
+		require_once "../modelos/alumnos_model.php";
 		$alumnos=new Alumnos();
 		$team_id=$_REQUEST["idgrupo"];
 		$rsptav=$alumnos->verficar_alumno($user_id,$team_id);
@@ -116,7 +116,7 @@ switch ($_GET["op"]) {
 			exit(0);
 		}
 
-		require_once "../modelos/Alumnos_model.php";
+		require_once "../modelos/alumnos_model.php";
 		$alumnos=new Alumnos();
 		$team_id=$_REQUEST["idgrupo"];
 		$rsptav=$alumnos->verficar_alumno($user_id,$team_id);
@@ -189,11 +189,11 @@ switch ($_GET["op"]) {
 
 	case 'listar_calificacion':
 
-		require_once "../modelos/Alumnos_model.php";
+		require_once "../modelos/alumnos_model.php";
 		$alumnos=new Alumnos();
 		$team_id=$_REQUEST["idgrupo"];
 		$rsptav=$alumnos->verficar_alumno($user_id,$team_id);
-		require_once "../modelos/Cursos.php";
+		require_once "../modelos/cursos_model.php";
 		$cursos=new Cursos();
 		$rsptac=$cursos->listar($team_id);
 	 //           $rsptacurso=$cursos->verficar_curso($team_id);
@@ -224,7 +224,7 @@ switch ($_GET["op"]) {
 
 				 <?php
 				 //OBTENEMOS EL ID DEL CURSO
-				require_once "../modelos/Cursos.php";
+				require_once "../modelos/cursos_model.php";
 				$cursos=new Cursos();
 				$rsptacurso=$cursos->listar($team_id);
 				while ($regc=$rsptacurso->fetch_object()) {
@@ -232,7 +232,7 @@ switch ($_GET["op"]) {
 					$idalumno=$reg->idalumn; 
 
 				//OBTENEMOS LAS NOTAS ENVIANDO LOS PARAMETROS ($idcurso Y $idalumno)
-				require_once "../modelos/Calificaciones.php";
+				require_once "../modelos/calificaciones_model.php";
 				$calificaciones=new Calificaciones();
 				$rsptacalif=$calificaciones->listar_calificacion($idalumno,$idcurso);
 				  $regn=$rsptacalif->fetch_object();?>

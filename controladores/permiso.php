@@ -1,5 +1,5 @@
  <?php 
-require_once "../modelos/Permiso.php";
+require_once "../modelos/permiso_model.php";
 
 $categoria=new Permiso();
 

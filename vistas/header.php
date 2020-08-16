@@ -31,7 +31,7 @@ if (strlen(session_id())<1)
 
   </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-red sidebar-mini">
   <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
@@ -177,7 +177,7 @@ if ($_SESSION['escritorio']==1) {
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href="calificaciones.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-circle-o"></i> Calificaciones</a></li>
+          <li><a href="calificaciones_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class="fa fa-circle-o"></i> Calificaciones</a></li>
           </ul>
         </li>
           <li class="treeview">
