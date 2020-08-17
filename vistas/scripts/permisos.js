@@ -35,7 +35,7 @@ function listar(){
 			],
 		"ajax":
 		{
-			url:'controladores/permiso.php?op=listar',
+			url:'../controladores/permiso.php?op=listar',
 			type: "get",
 			dataType : "json",
 			error:function(e){
