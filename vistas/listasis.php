@@ -22,7 +22,7 @@ if ($_SESSION['grupos']==1) {
       <div class="box">
 <!--box-header-->
 <!--centro-->
- 
+
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <input type="hidden" id="idgrupo" name="idgrupo" value="<?php echo $_GET["idgrupo"];?>">
@@ -33,7 +33,7 @@ if ($_SESSION['grupos']==1) {
                  <a href="../vistas/vista_grupo_view.php?idgrupo=<?php echo $_GET["idgrupo"]; ?>"><i class='fa fa-arrow-circle-left'></i> Volver</a>
               </li>
               <li><a href="#tab_1-1" data-toggle="tab" aria-expanded="false">Calificaciones</a></li>
-              <li><a href="#tab_2-2" data-toggle="tab" aria-expanded="false">Comportamiento</a></li>
+              <!--<li><a href="#tab_2-2" data-toggle="tab" aria-expanded="false">Comportamiento</a></li>-->
               <li><a href="#tab_3-2" data-toggle="tab" aria-expanded="true">Asistencia</a></li>
               <li class="pull-left header"><i class="fa fa-list"></i>Listar Cursos</li>
             </ul>
@@ -98,17 +98,16 @@ if ($_SESSION['grupos']==1) {
     </section>
     <!-- /.content -->
   </div>
-<?php 
+<?php
 }else{
- require 'noacceso.php'; 
+ require 'noacceso.php';
 }
 
 require 'footer.php';
  ?>
  <script src="scripts/listasis.js"></script>
- <?php 
+ <?php
 }
 
 ob_end_flush();
   ?>
-
