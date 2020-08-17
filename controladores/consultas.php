@@ -40,7 +40,7 @@ switch ($_GET["op"]) {
 			?>
 
 		<table id="dataw" class="table table-striped table-bordered table-condensed table-hover">
-			<thead class ="#dd4b39" align="text-center">
+			<thead bgcolor ="#dd4b39" align="text-center">
 				<th >Nombre</th>
 				<?php for($i=0;$i<$range;$i++){?>
 				<th >
@@ -127,7 +127,7 @@ switch ($_GET["op"]) {
 			?>
 
 		<table id="dataco" class="table table-striped table-bordered table-condensed table-hover">
-			<thead class ="#dd4b39" align="text-center">
+			<thead bgcolor ="#dd4b39" align="text-center">
 				<th>Nombre</th>
 				<?php for($i=0;$i<$range;$i++){?>
 				<th>
@@ -205,7 +205,7 @@ switch ($_GET["op"]) {
 			?>
 
 		<table id="dataca" class="table table-striped table-bordered table-condensed table-hover">
-			<thead class ="#dd4b39" align="text-center">
+			<thead bgcolor ="#dd4b39" align="text-center">
 			<th  >Nombre</th>
 			<?php
 			//OBTENEMOS LOS DAOTOS DEL CURSO

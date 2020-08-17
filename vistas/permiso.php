@@ -53,7 +53,7 @@ if ($_SESSION['acceso']==1) {
 }
 require 'footer.php'
  ?>
- <script src="scripts/permiso.js"></script>
+ <script src="scripts/permisos.js"></script>
  <?php 
 }
 
